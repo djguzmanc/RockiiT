@@ -1,0 +1,22 @@
+nav {
+    background-color: #FFE600;
+    color: black;
+    padding: 0px 10%;
+}
+
+.brand-logo {
+    font-size: 2.5em;
+}
+
+.mat_icon {
+    display: inline;
+    position: absolute;
+    top: -1px;
+    left: 2px;
+}
+
+a {
+    font-size: 1.3em;
+    padding-left: 30px;
+    position: relative;
+}
