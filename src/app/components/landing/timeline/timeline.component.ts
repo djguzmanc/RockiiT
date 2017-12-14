@@ -228,7 +228,7 @@ export class TimelineComponent implements OnInit {
       cartel: ""
     },
     {
-      content: `La versión número veintitres del festival de rock más,61 bandas nacionales, locales e internacionales que se subieron al escenario del Parque Metropolitano Simón Bolívar.`
+      content: `La versión número veintitres del festival de rock más,61 bandas nacionales, locales e internacionales que se subieron al escenario del Parque Metropolitano Simón Bolívar.`,
       img_path: '/assets/images/2017.jpg',
       title: 'Rock al parque',
       selected: false,
