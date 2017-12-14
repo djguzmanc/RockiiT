@@ -11,8 +11,22 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">  
+  <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAkjK7FeNi4C5Ch7vrfAZZzu9m5j7OaPjY",
+      authDomain: "askiitchat-f8901.firebaseapp.com",
+      databaseURL: "https://askiitchat-f8901.firebaseio.com",
+      projectId: "askiitchat-f8901",
+      storageBucket: "askiitchat-f8901.appspot.com",
+      messagingSenderId: "80497216846"
+    };
+    firebase.initializeApp(config);
+  </script>
 </head>
 <body>
   <app-root></app-root>
