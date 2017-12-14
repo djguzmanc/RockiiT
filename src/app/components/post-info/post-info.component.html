@@ -2,10 +2,16 @@
     <h1 class="title">{{title}}</h1>
     <div class="post_content text-center">
         <div class="image_container">
-            <img src="{{imgURL}}" height="300" class="image">
+            <img src="{{imgURL}}" width="700" class="image">
         </div>
         <p class="desc">{{description}}</p>
     </div>
-    <a class="waves-effect waves-light btn spacing" (click)="like()">Like</a>
-    <a class="waves-effect waves-light btn spacing" (click)="report()">Report</a>
+    <a class="waves-effect waves-light btn spacing action" [class.liked]="liked" (click)="like()">
+      <i class="material-icons" style="vertical-align: middle">thumb_up</i>
+      Like
+    </a>
+    <a class="waves-effect waves-light btn spacing action" [class.reported]="reported" (click)="report()">
+      <i class="material-icons" style="vertical-align: middle">sentiment_very_dissatisfied</i>
+      Report
+    </a>
 </div>

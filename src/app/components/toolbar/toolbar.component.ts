@@ -28,7 +28,7 @@ export class ToolbarComponent implements OnInit {
 
   openSignUp() {
     let dialogRef = this.dialog.open( SignUpComponent, {
-        height: '500px',
+        height: '600px',
         width: '700px'
     });
 

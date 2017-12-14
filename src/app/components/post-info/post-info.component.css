@@ -19,6 +19,7 @@
 
 .desc {
     font-family: 'Roboto';
+    font-size: 1.3em;
 }
 
 .image_container  {
@@ -30,4 +31,20 @@
 .spacing {
     margin-right: 30px;
     margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.action {
+    background-color: white;
+    color: black !important;
+    font-family: 'Anton';
+    font-size: 1.4em;
+}
+
+.liked {
+    background-color: #039600;
+}
+
+.reported {
+    background-color: #D00000;
 }

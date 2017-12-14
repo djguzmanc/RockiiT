@@ -14,7 +14,7 @@
         </div>
         <div class="form_item">
             <label for="">Descripción</label>
-            <textarea class="materialize-textarea " #description ></textarea>
+            <textarea class="materialize-textarea" #description ></textarea>
         </div>
 
         <div class="form_item">
@@ -22,16 +22,19 @@
             <input #year type="number" name="" value="2017" max="2017" min="1995" >
         </div>
 
-        <label class="btn up-button with-cool-font" style="color:white; text-align:center;">
+        <label class="btn up-button white black_font" style="color:white; text-align:center;">
           <i class="material-icons" style="vertical-align: middle">cloud_upload</i>
           BROWSE <input type="file" (change)="fileChange($event)"
           accept="image/*"  hidden/>
         </label>
-        <button type="button" mat-button class="action" (click)="uploadPost(title.value,description.value,year.value)">COMPARTE</button>
+        <button type="button" mat-button class="action" (click)="uploadPost(title.value,description.value,year.value)">
+          <i class="material-icons" style="vertical-align: middle">share</i>
+          COMPARTE
+        </button>
 
       </div>
       <div class="col s6">
-        <div class="card cardWidth">
+        <div class="card cardWidth" *ngIf="imageURL!=undefined">
           <div class="card-image">
             <img src="{{imageURL}}" class="imagen">
               <span class="card-title">{{fileName}}</span>

@@ -21,6 +21,9 @@ export class PostInfoComponent implements OnInit {
 
   year = 0;
 
+  liked = false;
+  reported = false;
+
   constructor(public dialogRef: MatDialogRef<PostInfoComponent>,@Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit( ) {
@@ -28,17 +31,35 @@ export class PostInfoComponent implements OnInit {
   }
 
   like( ) {
-      firebase.database( ).ref( '/posts/' + this.year ).child( String( this.postFBKey ) )
-        .child( 'likes' ).set( this.likes + 1 ).then( snapshot => {
-          this.likes++;
-        })
+      if ( !this.liked ) {
+        firebase.database( ).ref( '/posts/' + this.year ).child( String( this.postFBKey ) )
+          .child( 'likes' ).set( this.likes + 1 ).then( snapshot => {
+            this.likes++;
+            this.liked = true;
+          })
+      } else {
+        firebase.database( ).ref( '/posts/' + this.year ).child( String( this.postFBKey ) )
+          .child( 'likes' ).set( this.likes - 1 ).then( snapshot => {
+            this.likes--;
+            this.liked = false;
+          })
+      }
   }
 
   report( ) {
-      firebase.database( ).ref( '/posts/' + this.year ).child( String( this.postFBKey ) )
-        .child( 'reports' ).set( this.reports + 1 ).then( snapshot => {
-          this.reports++;
-        })
+      if ( !this.reported ) {
+        firebase.database( ).ref( '/posts/' + this.year ).child( String( this.postFBKey ) )
+          .child( 'reports' ).set( this.reports + 1 ).then( snapshot => {
+            this.reports++;
+            this.reported = true;
+          })
+      } else {
+        firebase.database( ).ref( '/posts/' + this.year ).child( String( this.postFBKey ) )
+          .child( 'reports' ).set( this.reports - 1 ).then( snapshot => {
+            this.reports--;
+            this.reported = false;
+          })
+      }
   }
 
 }

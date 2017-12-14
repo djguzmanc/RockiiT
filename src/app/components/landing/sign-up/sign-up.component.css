@@ -4,7 +4,10 @@
 
 label {
     margin: 0px;
+    color: white;
+    font-size: 1.4em;
 }
+
 
 .form_item {
     width: 80%;
@@ -13,4 +16,9 @@ label {
 
 .action {
     margin-left: 42%;
+    margin-top: 30px;
+    background-color: white;
+    color: black;
+    font-family: 'Anton';
+    font-size: 1.4em;
 }
