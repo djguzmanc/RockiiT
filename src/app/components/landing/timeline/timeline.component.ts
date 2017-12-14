@@ -224,6 +224,15 @@ export class TimelineComponent implements OnInit {
       title: 'Rock al parque',
       selected: false,
       caption: '20 Mayo',
+      date: new Date( 2016, 5, 18 ),
+      cartel: ""
+    },
+    {
+      content: `La versión número veintitres del festival de rock más,61 bandas nacionales, locales e internacionales que se subieron al escenario del Parque Metropolitano Simón Bolívar.`
+      img_path: '/assets/images/2017.jpg',
+      title: 'Rock al parque',
+      selected: false,
+      caption: '20 Mayo',
       date: new Date( 2017, 5, 18 ),
       cartel: ""
     }
@@ -252,7 +261,8 @@ export class TimelineComponent implements OnInit {
     this.data[18],
     this.data[19],
     this.data[20],
-    this.data[21]
+    this.data[21],
+    this.data[22]
   ];
 
 }
