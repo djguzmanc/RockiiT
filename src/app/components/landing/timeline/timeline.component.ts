@@ -224,7 +224,7 @@ export class TimelineComponent implements OnInit {
       title: 'Rock al parque',
       selected: false,
       caption: '20 Mayo',
-      date: new Date( 2016, 5, 18 ),
+      date: new Date( 2017, 5, 18 ),
       cartel: ""
     }
   ]

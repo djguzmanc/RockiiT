@@ -319,11 +319,18 @@ ol, ul {
     padding: 5% 0;
     max-height: 700px;
     overflow-y: auto;
+    color: #8e6e00;
 }
+
+.grayPlease{
+  color: black;
+}
+
 
 .spacing {
     margin-right: 15px;
     margin-top: 30px;
+    background-color: white;
 }
 
 .fix_font_size {

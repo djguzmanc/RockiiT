@@ -13,6 +13,7 @@ import { TimelineElement } from './timeline-element';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
 import { PostExpComponent } from '../landing/post-exp/post-exp.component';
+import { Router } from '@angular/router';
 
 declare var firebase: any;
 
@@ -79,7 +80,7 @@ export class HorizontalTimelineComponent implements AfterViewInit {
 
   _userIsIn = false;
 
-  constructor(private _cdr: ChangeDetectorRef,public dialog: MatDialog) {
+  constructor(private _cdr: ChangeDetectorRef,public dialog: MatDialog, private router: Router) {
   }
 
   ngOnInit() {
@@ -358,5 +359,10 @@ export class HorizontalTimelineComponent implements AfterViewInit {
         height: '600px',
         width: '900px'
     });
+  }
+
+  print( d ) {
+      var date = String( d )
+      this.router.navigate( [ 'history', date.split( " " )[ 3 ] ] )
   }
 }

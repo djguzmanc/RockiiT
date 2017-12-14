@@ -41,9 +41,9 @@
                     <h4>Cartel:</h4>
                     <p class="fix_font_size">{{item.cartel}}</p>
 
-                    <div class="text-center">
-                      <a class="waves-effect waves-light btn spacing">Conoce más</a>
-                      <a  (click)="openPost()" class="waves-effect waves-light btn spacing">Comparte tu experiencia</a>
+                    <div class="text-center grayPlease">
+                      <a class="waves-effect waves-light btn spacing" (click)="print(item.date)"><i class="material-icons left">info</i>Conoce más</a>
+                      <a  (click)="openPost()" class="waves-effect waves-light btn spacing"><i class="material-icons left">insert_comment</i>Comparte tu experiencia</a>
 
                     </div>
 
