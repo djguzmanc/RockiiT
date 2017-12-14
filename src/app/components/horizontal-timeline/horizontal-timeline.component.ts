@@ -120,10 +120,15 @@ export class HorizontalTimelineComponent implements AfterViewInit {
     this.initView();
   }
 
-  private _dateFormat: string = 'dd.MM.yyyy';
+  private _dateFormat: string = 'yyyy';
+  private _dateFormat2: string = 'dd.MM.yyyy';
 
   get dateFormat(): string {
     return this._dateFormat;
+  }
+
+  get dateFormat2(): string {
+    return this._dateFormat2;
   }
 
   @Input()

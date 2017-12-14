@@ -44,7 +44,7 @@ ol, ul {
   height: 100%;
   width: 20px;
 }
-
+/*
 .cd-horizontal-timeline .events-wrapper::before {
   left: 0;
   background-image: -webkit-linear-gradient(left, #fff, rgba(248, 248, 248, 0));
@@ -56,7 +56,7 @@ ol, ul {
   background-image: -webkit-linear-gradient(right, #fff, rgba(248, 248, 248, 0));
   background-image: linear-gradient(to left, #fff, rgba(248, 248, 248, 0));
 }
-
+*/
 .cd-horizontal-timeline .events {
   /* this is the grey line/timeline */
   position: absolute;
@@ -65,7 +65,7 @@ ol, ul {
   top: 49px;
   height: 2px;
   /* width will be set using JavaScript */
-  background: #dfdfdf;
+  background: #403900;
   -webkit-transition: -webkit-transform 0.4s;
   -moz-transition: -moz-transform 0.4s;
   transition: transform 0.4s;
@@ -100,10 +100,11 @@ ol, ul {
   bottom: 0;
   z-index: 2;
   text-align: center;
-  font-size: 12px;
+  font-family: "Roboto";
+  font-size: 14px;
   text-decoration: none;
   padding-bottom: 15px;
-  color: #383838;
+  color: lightgray;
   /* fix bug on Safari - text flickering while timeline translates */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -128,15 +129,15 @@ ol, ul {
   width: 20px;
   border-radius: 50%;
   border: 2px solid #FFE600;
-  background-color: #FFE600;
+  background-color: #BFAC00;
   -webkit-transition: background-color 0.3s, border-color 0.3s;
   -moz-transition: background-color 0.3s, border-color 0.3s;
   transition: background-color 0.3s, border-color 0.3s;
 }
 
 .cd-horizontal-timeline .events a:hover::after {
-  background-color: red;
-  border-color: red;
+  background-color: #403900;
+  border-color: #403900;
 }
 
 .cd-horizontal-timeline .events a.selected {
@@ -144,8 +145,8 @@ ol, ul {
 }
 
 .cd-horizontal-timeline .events a.selected::after {
-  background-color: #FFE600;
-  border-color: #FFE600;
+  background-color: #7F7300;
+  border-color: #7F7300;
 }
 
 .cd-horizontal-timeline .events a.older-event::after {
@@ -181,10 +182,10 @@ ol, ul {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 34px;
-  width: 34px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
-  border: 2px solid #dfdfdf;
+  border: 2px solid #FFE600;
   /* replace text with an icon */
   overflow: hidden;
   color: transparent;
@@ -239,7 +240,7 @@ ol, ul {
 }
 
 .cd-timeline-navigation a.inactive:hover {
-  border-color: #dfdfdf;
+  border-color: #403900;
 }
 
 .cd-horizontal-timeline .events-content {
@@ -276,20 +277,16 @@ ol, ul {
 .cd-horizontal-timeline .events-content em {
   display: block;
   font-style: italic;
-  margin: 10px auto;
-}
-
-.cd-horizontal-timeline .events-content em::before {
-  content: '- ';
+  margin: 0px auto 30px auto;
 }
 
 .cd-horizontal-timeline .events-content p {
-  font-size: 1.4rem;
+  font-size: 14px;
   color: #959595;
 }
 
 .cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
-  line-height: 1.6;
+  line-height: 1.2;
 }
 
 @media only screen and (min-width: 768px) {
@@ -298,11 +295,11 @@ ol, ul {
   }
 
   .cd-horizontal-timeline .events-content em {
-    font-size: 2rem;
+    font-size: 22px;
   }
 
   .cd-horizontal-timeline .events-content p {
-    font-size: 1.3rem;
+    font-size: 17px;
     font-family: 'Roboto', sans-serif;
   }
 }
@@ -342,9 +339,13 @@ ol, ul {
 }
 
 .bordering {
-    border: solid 1px white;
+    border: solid 1px #999;
     border-radius: 10px;
-    box-shadow: inset 0px 0px 30px white;
+    box-shadow: inset 0px 0px 10px #999;
+}
+
+.landing-title {
+  margin-bottom: 0px;
 }
 
 ::-webkit-scrollbar {
