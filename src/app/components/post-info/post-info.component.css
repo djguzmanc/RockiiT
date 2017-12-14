@@ -1,0 +1,33 @@
+.modal_content {
+    padding: 0px 50px;
+}
+
+.title {
+    border-bottom: solid 1px white;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.post_content p {
+    margin-left: 25px;
+    text-align: justify;
+}
+
+.image {
+
+}
+
+.desc {
+    font-family: 'Roboto';
+}
+
+.image_container  {
+    border-bottom: solid 1px white;
+    margin: 30px 0px 50px;
+    padding: 30px 0px;
+}
+
+.spacing {
+    margin-right: 30px;
+    margin-top: 30px;
+}

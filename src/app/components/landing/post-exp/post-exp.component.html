@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col s12 text-center">
+    <h1 class="white-font with-cool-font">COMPARTE TU EXPERIENCIA!</h1>
+  </div>
+</div>
+
+<form class="noScrollb">
+
+    <div class="row">
+      <div class="col s6">
+        <div class="form_item">
+            <label for="">Título</label>
+            <input #title type="text" name="" value="" >
+        </div>
+        <div class="form_item">
+            <label for="">Descripción</label>
+            <textarea class="materialize-textarea " #description ></textarea>
+        </div>
+
+        <div class="form_item">
+            <label for="">Año</label>
+            <input #year type="number" name="" value="2017" max="2017" min="1995" >
+        </div>
+
+        <label class="btn up-button with-cool-font" style="color:white; text-align:center;">
+          <i class="material-icons" style="vertical-align: middle">cloud_upload</i>
+          BROWSE <input type="file" (change)="fileChange($event)"
+          accept="image/*"  hidden/>
+        </label>
+        <button type="button" mat-button class="action" (click)="uploadPost(title.value,description.value,year.value)">COMPARTE</button>
+
+      </div>
+      <div class="col s6">
+        <div class="card cardWidth">
+          <div class="card-image">
+            <img src="{{imageURL}}" class="imagen">
+              <span class="card-title">{{fileName}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+</form>

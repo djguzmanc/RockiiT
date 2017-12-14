@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col s12 text-center">
+    <h1 class="white-font with-cool-font">REGISTRATE</h1>
+  </div>
+</div>
+
+<form class="">
+
+    <div class="form_item">
+        <label for="">Correo</label>
+        <input #email type="text" name="" value="">
+    </div>
+
+    <div class="form_item">
+        <label for="">Contraseña</label>
+        <input #password type="password" name="" value="">
+    </div>
+
+    <div class="form_item">
+        <label for="">Confirmar contraseña</label>
+        <input #password_c type="password" name="" value="">
+    </div>
+
+    <button type="button" mat-button class="action" (click)="signUp(email.value,password.value,password_c.value)">REGISTRATE</button>
+
+</form>
